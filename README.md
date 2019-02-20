@@ -42,7 +42,7 @@ This code corresponds to the articles:
 
 + https://arxiv.org/abs/1808.07664.pdf
 + https://arxiv.org/pdf/1808.10754.pdf
-+ TODO: add JFM upon publication
++ https://www.cambridge.org/core/journals/journal-of-fluid-mechanics/article/artificial-neural-networks-trained-through-deep-reinforcement-learning-discover-control-strategies-for-active-flow-control/D5B80D809DFFD73760989A07F5E11039
 
 If you use our code in your research, please consider citing our papers:
 
@@ -50,7 +50,7 @@ Rabault, J., Kuchta, M., Jensen, A., Reglade, U., Cerardi, N., 2018. Artificial 
 
 Rabault, J., Reglade, U., Cerardi, N., Kuchta, M. and Jensen, A., 2018. Deep Reinforcement Learning achieves flow control of the 2D Karman Vortex Street. arXiv preprint arXiv:1808.10754.
 
-TODO: add JFM
+Rabault, J., Kuchta, M., Jensen, A., Réglade, U., & Cerardi, N. (2019). Artificial neural networks trained through deep reinforcement learning discover control strategies for active flow control. Journal of Fluid Mechanics, 865, 281-302. doi:10.1017/jfm.2019.62
 
 In addition, some slides of a lecture about this work are available on my website:
 
