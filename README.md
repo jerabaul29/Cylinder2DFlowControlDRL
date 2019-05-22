@@ -60,6 +60,10 @@ Note that, in the first article (and the JFM article), we adopt a renormalizatio
 
 ## First steps
 
+I present two methods here: install everything by hand in the right versions, or use a singularity container for virtualization and reproducibility. The singularity container is the recommended solution, that has been tested at many institutions and reproducibility has been confirmed and validated. Several users who tried to install things by hand contacted me because they had problem to reproduce the software stack: this is **not** the recommended solution and I will not help with debugging problems you encounter in this case.
+
+### Installing by hand (discouraged)
+
 Before launching any script, check that you have installed (tested on Ubuntu 16.04) :
 - Tensorflow (tested with tensorflow 1.8.0)
 - TensorForce (tested with tensorforce 0.4.2, commit from the tensorforce repo: 5f770fd)
@@ -67,6 +71,8 @@ Before launching any script, check that you have installed (tested on Ubuntu 16.
 - Fenics (2017.1.0 or 2017.2.0)
 
 For this, you can either install these modules on your computer yourself (respecting the version / commit, otherwise some things *may* break), or use the singularity image we provide (recommended). Some of the steps below assume that you are working on a Linux machine, but you can adapt to a windows / Mac.
+
+### Using through our container (recommended)
 
 If you want to use our singularity container (recommended, credits to Terje Kvernes, UiO / IT of the Department of Mathematics for setting up this infrastructure):
 - Download and install singularity (see for example the tutorial here http://www.sdsc.edu/support/user_guides/tutorials/singularity.html , or the singularity documentation).
