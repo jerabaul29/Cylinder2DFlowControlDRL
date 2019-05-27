@@ -199,6 +199,10 @@ Finally, **best_model** contains the save of the best neural network encountered
 
 # Notes
 
+## Confusing choices in the code
+
+- The code is for some *bad* legacy reasons written in a 'dimensional' form. All results in the JFM paper are by contrast non dimensional. This can be confusing. For a detailed discussion of the non-dimensionalization process, see the discussion on this issue: https://github.com/jerabaul29/Cylinder2DFlowControlDRL/issues/3 .
+
 ## Errata and problems in code
 
 - There is a small erratum in one of the dumping routine, that is not fixed because of backwards compatibility of some of our plotting routines. Namely, files of the kind *debug.csv* have columns in a different order than indicated by the header; the real order is [Name;Episode;Step;RecircArea;Drag;lift]).
