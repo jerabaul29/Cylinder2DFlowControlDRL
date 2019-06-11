@@ -201,7 +201,7 @@ Finally, **best_model** contains the save of the best neural network encountered
 
 ## Confusing choices in the code
 
-- The code is for some *bad* legacy reasons written in a 'dimensional' form. All results in the JFM paper are by contrast non dimensional. This can be confusing. For a detailed discussion of the non-dimensionalization process, see the discussion on this issue: https://github.com/jerabaul29/Cylinder2DFlowControlDRL/issues/3 .
+- The code is for some *bad* legacy reasons written in a 'dimensional' form. All results in the JFM paper are by contrast non dimensional. This can be confusing. For a detailed discussion of the non-dimensionalization process, see the discussion on this issue: https://github.com/jerabaul29/Cylinder2DFlowControlDRL/issues/3 . Note that if you want to change the Reynolds number, you may need to adapt the renormalization coefficients: https://github.com/jerabaul29/Cylinder2DFlowControlDRL/issues/6 .
 
 ## Errata and problems in code
 
