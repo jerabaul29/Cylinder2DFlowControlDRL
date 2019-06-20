@@ -113,7 +113,7 @@ def one_run():
     state = environment.reset()
     environment.render = True
 
-    for k in range(env.nb_actuations):
+    for k in range(3 * env.nb_actuations):
         #environment.print_state()
         action = agent.act(state, deterministic=deterministic)
         state, terminal, reward = environment.execute(action)
