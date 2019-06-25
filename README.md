@@ -12,6 +12,16 @@ Basically, this repository allows you to produce results like the following, whe
   <img src="./comparison_baseline_actuation.gif">
 </p>
 
+## Update: training in parallel
+
+We are working on parallelization of the DRL algorithm through the use of several environments. See our preprint here:
+
+XX:TODO
+
+and the repository with the parallel learning code here:
+
+https://github.com/jerabaul29/Cylinder2DFlowControlDRLParallel
+
 ## What is in the repo ?
 
 The code is in the **Cylinder2DFlowControlWithRL** subfolder. Inside it, you will find :
