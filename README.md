@@ -16,7 +16,7 @@ Basically, this repository allows you to produce results like the following, whe
 
 We are working on parallelization of the DRL algorithm through the use of several environments. See our preprint here:
 
-XX:TODO
+https://arxiv.org/pdf/1906.10382.pdf
 
 and the repository with the parallel learning code here:
 
@@ -70,7 +70,7 @@ Note that, in the first article (and the JFM article), we adopt a renormalizatio
 
 ## First steps
 
-I present two methods here: install everything by hand in the right versions, or use a singularity container for virtualization and reproducibility. The singularity container is the recommended solution, that has been tested at many institutions and reproducibility has been confirmed and validated. Several users who tried to install things by hand contacted me because they had problem to reproduce the software stack: this is **not** the recommended solution and I will not help with debugging problems you encounter in this case.
+I present two methods here: install everything by hand in the right versions, or use a singularity container for virtualization and reproducibility. The singularity container is the recommended solution, that has been tested at many institutions and reproducibility has been confirmed and validated. Several users who tried to install things by hand contacted me because they had problem to reproduce the software stack: this is **not** the recommended solution and I will not help with debugging problems you encounter in this case. In addition, a docker image has been contributed by an user.
 
 ### Installing by hand (discouraged)
 
@@ -100,6 +100,10 @@ Note that if you want to execute on an external media, you can type a command as
 singularity shell -H SET_YOUR_BASE_PATH SET_YOUR_PATH/fenics-and-more.img -c "export DISPLAY=:0.0 && export PATH="SET_YOUR_BASE_PATH/gmsh-git-Linux64/bin:$PATH" && /bin/bash"
 ```
 This singularity image contains tensorflow, tensorforce, fenics, and a Python install with the packages you need to run our scripts. If you want to mesh, you have to make sure that the path export to your gmsh is valid (the path export works only from folders visible to singularity, i.e. under the *SET_YOUR_BASE_PATH* in the tree). If you have problems with the gmsh calls, you may also hard code the paths to gmsh in the calls lines 35 and 52 in *Cylinder2DFlowControlWithRL/generate_msh.py*, putting the path to the gmsh in your cloned repo. If you do this, remember to make gmsh executable first (```chmod +x gmsh```).
+
+### Using through the contributed docker image (recommended, not tested in details by the authors)
+
+Wei Zhang (github id: waynezw0618), from the National University of Sinapore (NUS, China) was kind to contribute a docker container that should allow to run the code on this repo. The docker container is available as a .tar image here: https://folk.uio.no/jeanra/Informatics/cylinder2dflowcontrol.tar . It can be loaded and then executed following the usual docker workflow, for some help see for example https://fenics.readthedocs.io/projects/containers/en/latest/work_flows.html .
 
 ### Launching one episode without training
 
