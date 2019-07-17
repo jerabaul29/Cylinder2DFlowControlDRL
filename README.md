@@ -103,7 +103,7 @@ This singularity image contains tensorflow, tensorforce, fenics, and a Python in
 
 ### Using through the contributed docker image (recommended, not tested in details by the authors)
 
-Wei Zhang (github id: waynezw0618), from the National University of Sinapore (NUS, China) was kind to contribute a docker container that should allow to run the code on this repo. The docker container is available as a .tar image here: https://folk.uio.no/jeanra/Informatics/cylinder2dflowcontrol.tar . It can be loaded and then executed following the usual docker workflow, for some help see for example https://fenics.readthedocs.io/projects/containers/en/latest/work_flows.html .
+Wei Zhang (github id: waynezw0618), senior researcher from the Marine design and research institute of China, was kind to contribute a docker container that should allow to run the code on this repo. The docker container is available as a .tar image here: https://folk.uio.no/jeanra/Informatics/cylinder2dflowcontrol.tar . It can be loaded and then executed following the usual docker workflow, for some help see for example https://fenics.readthedocs.io/projects/containers/en/latest/work_flows.html .
 
 ### Launching one episode without training
 
