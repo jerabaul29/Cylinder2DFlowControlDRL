@@ -222,3 +222,11 @@ Finally, **best_model** contains the save of the best neural network encountered
 - There is a small erratum in one of the dumping routine, that is not fixed because of backwards compatibility of some of our plotting routines. Namely, files of the kind *debug.csv* have columns in a different order than indicated by the header; the real order is [Name;Episode;Step;RecircArea;Drag;lift]).
 
 - There is a memory leak in the specific matplotlib version included in the docker... This means that, if you let your code run with plotting, the RAM of your computer will saturate after a while. To avoid this, only use matplotlib showing when you want to visually inspect training. When you want to perform 'heavy' training, disable plotting by setting the *plot* named argument to *False* in your *perform_learning.py*
+
+## Typo in the paper
+
+- In the JFM paper
+
+  - Eqn. defining Q_ref (just after Eqn. 2.6, in the text): ```rho``` should not be needed in non-dimensional form. Anyways, ```rho``` is 1, so this makes not difference.
+
+  - Eqn. B3: there is a typo, this should be ```/R```, not ```/R^2```. This is purely a typo and is of course correctly implemented in the code (i.e., the code is correct).
