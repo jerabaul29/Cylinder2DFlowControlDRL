@@ -70,7 +70,7 @@ Note that, in the first article (and the JFM article), we adopt a renormalizatio
 
 ## First steps
 
-I present two methods here: install everything by hand in the right versions, or use a singularity container for virtualization and reproducibility. The singularity container is the recommended solution, that has been tested at many institutions and reproducibility has been confirmed and validated. Several users who tried to install things by hand contacted me because they had problem to reproduce the software stack: this is **not** the recommended solution and I will not help with debugging problems you encounter in this case. In addition, a docker image has been contributed by an user.
+I present two methods here: install everything by hand in the right versions, or use a singularity container for virtualization and reproducibility. The singularity container is the recommended solution, that has been tested at many institutions and reproducibility has been confirmed and validated. Several users who tried to install things by hand contacted me because they had problem to reproduce the software stack: this is **not** the recommended solution and I will not help with debugging problems you encounter in this case.
 
 ### Installing by hand (discouraged)
 
@@ -100,10 +100,6 @@ Note that if you want to execute on an external media, you can type a command as
 singularity shell -H SET_YOUR_BASE_PATH SET_YOUR_PATH/fenics-and-more.img -c "export DISPLAY=:0.0 && export PATH="SET_YOUR_BASE_PATH/gmsh-git-Linux64/bin:$PATH" && /bin/bash"
 ```
 This singularity image contains tensorflow, tensorforce, fenics, and a Python install with the packages you need to run our scripts. If you want to mesh, you have to make sure that the path export to your gmsh is valid (the path export works only from folders visible to singularity, i.e. under the *SET_YOUR_BASE_PATH* in the tree). If you have problems with the gmsh calls, you may also hard code the paths to gmsh in the calls lines 35 and 52 in *Cylinder2DFlowControlWithRL/generate_msh.py*, putting the path to the gmsh in your cloned repo. If you do this, remember to make gmsh executable first (```chmod +x gmsh```).
-
-### Using through the contributed docker image (recommended, not tested in details by the authors)
-
-Wei Zhang (github id: waynezw0618), senior researcher from the Marine design and research institute of China, was kind to contribute a docker container that should allow to run the code on this repo. The docker container is available as a .tar image here: https://folk.uio.no/jeanra/Informatics/cylinder2dflowcontrol.tar . It can be loaded and then executed following the usual docker workflow, for some help see for example https://fenics.readthedocs.io/projects/containers/en/latest/work_flows.html .
 
 ### Launching one episode without training
 
@@ -221,7 +217,7 @@ Finally, **best_model** contains the save of the best neural network encountered
 
 - There is a small erratum in one of the dumping routine, that is not fixed because of backwards compatibility of some of our plotting routines. Namely, files of the kind *debug.csv* have columns in a different order than indicated by the header; the real order is [Name;Episode;Step;RecircArea;Drag;lift]).
 
-- There is a memory leak in the specific matplotlib version included in the docker... This means that, if you let your code run with plotting, the RAM of your computer will saturate after a while. To avoid this, only use matplotlib showing when you want to visually inspect training. When you want to perform 'heavy' training, disable plotting by setting the *plot* named argument to *False* in your *perform_learning.py*
+- There is a memory leak in the specific matplotlib version included in the container... This means that, if you let your code run with plotting, the RAM of your computer will saturate after a while. To avoid this, only use matplotlib showing when you want to visually inspect training. When you want to perform 'heavy' training, disable plotting by setting the *plot* named argument to *False* in your *perform_learning.py*
 
 ## Typo in the paper
 
