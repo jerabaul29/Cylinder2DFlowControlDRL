@@ -1,0 +1,115 @@
+jet_positions[] = {};  // Always need to be ordered
+
+DefineConstant[
+length = {2.2, Name "Channel length"}
+front_distance = {0.2, Name "Cylinder center distance to inlet"}
+jet_radius = {0.05, Name "Cylinder radius"}
+width = {0.41, Name "Channel width"}
+// Mesh size specs
+cylinder_bl_width = {0.1, Name "Thickness of fine region close to cyliner"}
+wake_length = {0.6, Name "Length of fine box region behing cylinder"}
+cylinder_inner_size = {5E-3, Name "Mesh size close to cylinder"}
+cylinder_outer_size = {7E-3, Name "Mesh size at cylinders's disk"}
+wake_size = {7E-3, Name "Mesh size in the wake"}
+outlet_size = {1E-1, Name "Mesh size at outlet"}
+inlet_size = {2E-2, Name "Mesh size at inlet"}
+];
+
+// Seed the cylinder
+center = newp;
+Point(center) = {0, 0, 0, cylinder_inner_size};
+
+radius = jet_radius;
+// Just the circle
+left = newp; 
+Point(left) = {-jet_radius, 0, 0, cylinder_inner_size};
+
+up = newp;
+Point(up) = {0, jet_radius, 0, cylinder_inner_size};
+
+right = newp;
+Point(right) = {jet_radius, 0, 0, cylinder_inner_size};
+
+left_arc = newl;
+Circle(left_arc) = {left, center, up};
+
+right_arc = newl;
+Circle(right_arc) = {up, center, right};
+
+Physical Line(4) = {left_arc, right_arc};
+
+// The chanel
+// D------------------------------------C
+//             U
+// A-------L       R--------------------B
+
+
+A = newp;
+Point(A) = {-front_distance, 0, 0, inlet_size};
+
+B = newp;
+Point(B) = {-front_distance+length, 0, 0, outlet_size};
+
+C = newp;
+Point(C) = {-front_distance+length, width/2, 0, outlet_size};
+
+D = newp;
+Point(D) = {-front_distance, width/2, 0, inlet_size};
+
+AL = newl;
+Line(AL) = {A, left};
+
+RB = newl;
+Line(RB) = {right, B};
+
+BC = newl;
+Line(BC) = {B, C};
+
+CD = newl;
+Line(CD) = {C, D};
+
+DA = newl;
+Line(DA) = {D, A};
+
+// Surface
+plane = newl;
+Line Loop(plane) = {AL, left_arc, right_arc, RB, BC, CD, DA};
+Plane Surface(1) = {plane};
+
+Physical Surface(1) = {1};
+// Walls on top
+Physical Line(1) = {CD};
+// Inflow
+Physical Line(3) = {DA};
+// Outflow
+Physical Line(2) = {BC};
+// Symmetry
+Physical Line(5) = {AL, RB};
+
+// Control layer close to cylinder
+Field[1] = Distance;
+Field[1].NodesList = {center};
+
+Field[2] = Threshold;
+Field[2].IField = 1;
+Field[2].LcMin = cylinder_inner_size;
+Field[2].LcMax = outlet_size;   
+Field[2].DistMin = jet_radius+cylinder_bl_width/2;
+Field[2].DistMax = jet_radius+cylinder_bl_width;
+
+// Control wake
+wake_width = jet_radius + 2*cylinder_bl_width;
+
+Field[3] = Box;
+Field[3].XMin = 0;
+Field[3].XMax = jet_radius+wake_length;
+Field[3].YMin = 0;
+Field[3].YMax = wake_width/2;
+Field[3].VIn = wake_size;
+Field[3].VOut = outlet_size;
+
+// All
+Field[5] = Min;
+Field[5].FieldsList = {2, 3};
+
+Background Field = 5;     
