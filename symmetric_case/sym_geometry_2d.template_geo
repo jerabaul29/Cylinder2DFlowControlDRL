@@ -10,7 +10,7 @@ cylinder_bl_width = {0.1, Name "Thickness of fine region close to cyliner"}
 wake_length = {0.6, Name "Length of fine box region behing cylinder"}
 cylinder_inner_size = {5E-3, Name "Mesh size close to cylinder"}
 cylinder_outer_size = {7E-3, Name "Mesh size at cylinders's disk"}
-wake_size = {7E-3, Name "Mesh size in the wake"}
+wake_size = {7E-3, Name "Mesh size in the wake"}g
 outlet_size = {1E-1, Name "Mesh size at outlet"}
 inlet_size = {2E-2, Name "Mesh size at inlet"}
 ];
