@@ -1,0 +1,6 @@
+fenics-and-more.img_part.ae filter=lfs diff=lfs merge=lfs -text
+fenics-and-more.img_part.af filter=lfs diff=lfs merge=lfs -text
+fenics-and-more.img_part.aa filter=lfs diff=lfs merge=lfs -text
+fenics-and-more.img_part.ab filter=lfs diff=lfs merge=lfs -text
+fenics-and-more.img_part.ac filter=lfs diff=lfs merge=lfs -text
+fenics-and-more.img_part.ad filter=lfs diff=lfs merge=lfs -text

@@ -86,7 +86,14 @@ For this, you can either install these modules on your computer yourself (respec
 
 If you want to use our singularity container (recommended, credits to Terje Kvernes, UiO / IT of the Department of Mathematics for setting up this infrastructure):
 - Download and install singularity (see for example the tutorial here http://www.sdsc.edu/support/user_guides/tutorials/singularity.html , or the singularity documentation).
-- Download our singularity container, available here: https://folk.uio.no/jeanra/Informatics/fenics-and-more.img . Carefull, this is a full Linux image and weights a bit over 5GB.
+- Download our singularity container parts from the repo, available in the ```container``` folder.
+- The container was committed using git-lfs in several segments, to make sure that the size limit is not over-run. To put the segments together:
+```
+> cat fenics-and-more.img_part.?? > fenics-and-more.img
+> sha256sum fenics-and-more.img
+e6e3c6b24d4edb93022d1156aba1a458367242d0ba1f249508bd2669f87ee4b8  fenics-and-more.img
+
+```
 - Download from their website ( http://gmsh.info/ ) and unpack Gmsh, **in the right version**.
 - Now you should be able to load your singularity container inside which you can work in command line as a normal UNIX and run our scripts (of course, you will nedd to adapt the SET_YOUR_PATH stuff to your local paths; note that the gmsh path can only be DOWNSTREAM of the root path for your home if you use the -H option):
 
