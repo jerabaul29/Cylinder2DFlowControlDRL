@@ -86,8 +86,8 @@ For this, you can either install these modules on your computer yourself (respec
 
 If you want to use our singularity container (recommended, credits to Terje Kvernes, UiO / IT of the Department of Mathematics for setting up this infrastructure):
 - Download and install singularity (see for example the tutorial here http://www.sdsc.edu/support/user_guides/tutorials/singularity.html , or the singularity documentation).
-- Download our singularity container parts from the repo, available in the ```container``` folder.
-- The container was committed using git-lfs in several segments, to make sure that the size limit is not over-run. To put the segments together:
+- Download our singularity container parts from the repo, available in the ```container``` folder of hte present repo: https://github.com/jerabaul29/Cylinder2DFlowControlDRL/tree/master/container . The previous solution that relied on the folk.uio.no personal websites has been end-of-lifed and discontinued.
+- The container was committed using git-lfs in several segments, to make sure that the size limit is not over-run. To put the segments from the container folder together:
 ```
 > cat fenics-and-more.img_part.?? > fenics-and-more.img
 > sha256sum fenics-and-more.img
