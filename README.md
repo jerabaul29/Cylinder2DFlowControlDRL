@@ -1,3 +1,5 @@
+**NOTE**: in a follow-up work, we have parallelized the DRL part of the training. The code and container are also made available. If you want to use our code as a starting point for your own work, we strongly recommend to consider starting with the parallel code, rather than the code in this repository. The parallel code is simply more modern, and overall better. It is available at: https://github.com/jerabaul29/Cylinder2DFlowControlDRLParallel .
+
 # Cylinder2DFlowControlWithRL
 
 This repository performs Flow Control of the 2D Kármán Vortex Street with Deep Reinforcement Learning.
