@@ -26,6 +26,10 @@ and the repository with the parallel learning code here:
 
 https://github.com/jerabaul29/Cylinder2DFlowControlDRLParallel
 
+## Update: coupling with spectral CFD code released by another research group
+
+The DRL control can be coupled with a variety of CFD codes, and this was recently released by *Li and Zhang*, **Reinforcement-learning-based control of confined cylinder wakes with stability analyses**, in the case of Nek5000. Their code is available at: https://github.com/npuljc/RL_control_Nek5000 . That may also be a good further materials :) .
+
 ## What is in the repo ?
 
 The code is in the **Cylinder2DFlowControlWithRL** subfolder. Inside it, you will find :
