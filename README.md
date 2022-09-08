@@ -80,7 +80,7 @@ Note that, in the first article (and the JFM article), we adopt a renormalizatio
 
 I was recently invited to give a guest lecture about DRL for flow control at IFAIME; the recording is available at: https://www.youtube.com/watch?v=SfbajZPvGoM .
 
-[![IFAIME guest lecture: DRL for flow control](https://github.com/jerabaul29/Cylinder2DFlowControlDRL/blob/master/assets/image_ifaime_youtube.png)](https://www.youtube.com/watch?v=SfbajZPvGoM)
+[![IFAIME guest lecture: DRL for flow control](https://github.com/jerabaul29/Cylinder2DFlowControlDRL/blob/master/assets/image_ifaime_youtube_2.png)](https://www.youtube.com/watch?v=SfbajZPvGoM)
 
 ## First steps
 
