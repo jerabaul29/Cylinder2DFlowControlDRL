@@ -74,7 +74,11 @@ In addition, some slides of a lecture about this work are available on my websit
 
 + https://folk.uio.no/jeanra/Research/slides_active_flow_control_deep_reinforcement_learning.pdf
 
-Note that, in the first article (and the JFM article), we adopt a renormalization where the diameter of the cylinder is 1. In both the second article and the code, the renormalization is a bit different and follows what is done in the Turek benchmark. This simply means that lengths and times are scaled a factor 10 between the simulations / second article and the first one.
+Note that, in the first article (and the JFM article), we adopt a renormalization where the diameter of the cylinder is 1. In both the second article and the code, the renormalization is a bit different and follows what is done in the Turek benchmark. This simply means that lengths and times are scaled a factor 10 between the simulations / second article and the first one
+
+## Video of the lecture at IFAIME
+
+I was recently invited to give a guest lecture about DRL for flow control at IFAIME; the recording is available at: https://www.youtube.com/watch?v=SfbajZPvGoM .
 
 ## First steps
 
