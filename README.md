@@ -76,11 +76,11 @@ In addition, some slides of a lecture about this work are available on my websit
 
 Note that, in the first article (and the JFM article), we adopt a renormalization where the diameter of the cylinder is 1. In both the second article and the code, the renormalization is a bit different and follows what is done in the Turek benchmark. This simply means that lengths and times are scaled a factor 10 between the simulations / second article and the first one
 
-## Video of the lecture at IFAIME
+## Video of the lecture at AFMS
 
-I was recently invited to give a guest lecture about DRL for flow control at IFAIME; the recording is available at: https://www.youtube.com/watch?v=SfbajZPvGoM .
+I was recently invited to give a guest lecture about DRL for flow control at AFMS; the recording is available at: https://youtu.be/irNheFmWZTo .
 
-[![IFAIME guest lecture: DRL for flow control](https://github.com/jerabaul29/Cylinder2DFlowControlDRL/blob/master/assets/image_ifaime_youtube_2.png)](https://www.youtube.com/watch?v=SfbajZPvGoM)
+[![AFMS guest lecture: DRL for flow control](https://github.com/jerabaul29/Cylinder2DFlowControlDRL/blob/master/assets/AFMS_DRL.png)](https://youtu.be/irNheFmWZTo)
 
 ## First steps
 
