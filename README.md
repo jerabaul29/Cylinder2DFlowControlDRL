@@ -82,6 +82,8 @@ I was recently invited to give a guest lecture about DRL for flow control at AFM
 
 [![AFMS guest lecture: DRL for flow control](https://github.com/jerabaul29/Cylinder2DFlowControlDRL/blob/master/assets/AFMS_DRL.png)](https://youtu.be/irNheFmWZTo)
 
+You can find the corresponding slides at: https://github.com/jerabaul29/2023_slides_DeepReinforcementLearning_ActiveFlowControl_AFMS/blob/main/slides_2023_03_01_RABAULT_DRL_active_flow_control.pdf .
+
 ## First steps
 
 I present two methods here: install everything by hand in the right versions, or use a singularity container for virtualization and reproducibility. The singularity container is the recommended solution, that has been tested at many institutions and reproducibility has been confirmed and validated. Several users who tried to install things by hand contacted me because they had problem to reproduce the software stack: this is **not** the recommended solution and I will not help with debugging problems you encounter in this case.
